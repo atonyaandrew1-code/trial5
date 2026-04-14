@@ -1,0 +1,5 @@
+
+name:ety|marks:[34.0, 56.0, 44.0, 78.0, 90.0]|Average:60.400000|Grade:B
+name:andrew atonya|marks:[78.0, 98.0, 78.0, 67.0, 56.0]|Average:75.400000|Grade:A
+name:asazi|marks:[56.0, 87.0, 78.0, 9.0, 78.0]|Average:61.60|Grade:B
+name:philip|marks:[56.0, 98.0, 78.0, 56.0, 43.0]|Average:66.20|Grade:B

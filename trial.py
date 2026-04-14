@@ -25,10 +25,14 @@ class BankAccount:
         print(f"Total Balance: {self.__balance}")
         print("_"*20)
 
-#acc = BankAccount(input("enter your name: "),input("account no: "),int(input("enter initial balance: ")))
-#acc.deposit(int(input("How much do you want to deposit? ")))
-#acc.print_receipt()
-
+    def save_data(self):
+        with open("Bank deposit record.txt","a")as file:
+            file.write(f"Name:{self.owner}|Acc number:{self.number}|Current Balance:{self.__balance}| Date:{datetime.now()} \n")
+            print("Successfully saved")
+acc = BankAccount(input("enter your name: "),input("account no: "),int(input("enter initial balance: ")))
+acc.deposit(int(input("How much do you want to deposit? ")))
+acc.print_receipt()
+acc.save_data()
 
 class Student:
     def __init__(self,name,regNumber,year):
@@ -57,11 +61,11 @@ class Student:
         else: return "E"
     def save_data(self):
         with open("student record.txt","a")as file:
-            file.write(f"name:{self.name}|marks:{self.input_marks()}|Average:{self.get_average():2f}|Grade:{self.get_grade()}\n")
-            print("Successfully savedto student_record.txt")
+            file.write(f"name:{self.name}|marks:{self.marks}|Average:{self.get_average():.2f}|Grade:{self.get_grade()}\n")
+            print("Successfully saved to student_record.txt")
 
 
-student= Student(input("enter student name: "),input("registration number: "),input("year of study: ")) 
+student = Student(input("Enter your name: "),input("regNUmber: "),input("year of study"))
 student.input_marks()
 print(f"Student: {student.name}")
 print(f"Average Score: {student.get_average():2f}")
